@@ -143,13 +143,15 @@ button {
 /* media */
 @media (max-width: 872px) {
   header {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 
   main {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    
+    padding-bottom: 3.2rem;
   }
 
   .clock {
