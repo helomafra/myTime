@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.white-mode:root {
+  --icon-active-bg-color: #27ae60;
+  --icon-active-color: #ffffff;
+
+  --inverse-light--5: rgba(0, 0, 0, 0.05);
+  --inverse-light--10: rgba(0, 0, 0, 0.1);
+  --inverse-dark--10: rgba(255, 255, 255, 0.1);
+  --main-bg: white;
+  --text-medium: rgba(0, 0, 0, 0.6);
+  --text-high: black;
+
+  font-size: 62.5%;
+}
+
+.dark-mode:root {
+  --icon-active-bg-color: #27ae60;
+  --icon-active-color: #ffffff;
+
+  --inverse-light--5: rgba(255, 255, 255, 0.05);
+  --inverse-light--10: rgba(255, 255, 255, 0.1);
+  --inverse-dark--10: rgba(0, 0, 0, 0.1);
+  --main-bg: black;
+  --text-medium: rgba(255, 255, 255, 0.6);
+  --text-high: white;
+
+  font-size: 62.5%;
+}
+
+body {
+  max-height: 100vh;
+  max-width: 100vw;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-bg);
+}
+
+.hide {
+  display: none;
+}
+
+.logo svg path {
+  fill: var(--text-high);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 3.2rem 3.2rem 0;
+
+  margin-bottom: 20rem;
+}
+
+main {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 6.4rem;
+}
+
+.clock {
+  font-weight: 500;
+  font-size: 12.6rem;
+
+  display: flex;
+  flex-direction: column;
+  color: var(--text-high);
+
+  border: 2px solid var(--inverse-light--10);
+  border-radius: 34px;
+}
+
+#timer {
+  display: flex;
+  padding: 4.5rem 5.4rem;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+
+  padding: 2.4rem 6.4rem;
+
+  background: var(--inverse-light--5);
+  border-radius: 0 0 3.2rem 3.2rem;
+  border-top: 2px solid var(--inverse-light--10);
+}
+
+.set-timer svg path {
+  fill: var(--text-medium);
+}
+
+.set-timer svg rect {
+  stroke: var(--inverse-light--10);
+}
+
+.sounds {
+  display: grid;
+  grid-template-areas:
+    "A B"
+    "C D";
+
+  gap: 3.2rem;
+}
+
+.sounds button {
+  background-color: var(--inverse-light--5);
+  padding: 4.8rem;
+  border-radius: 2.4rem;
+}
+
+.sounds button svg path {
+  fill: var(--text-medium);
+}
+
+button.active {
+  background-color: var(--icon-active-bg-color);
+}
+
+button.active svg path {
+  fill: var(--icon-active-color);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+/* media */
+@media (max-width: 872px) {
+  header {
+    margin-bottom: 10rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .clock {
+    font-size: 8.4rem;
+  }
+
+  #timer {
+    padding: 3rem 6rem;
+  }
+
+  #controls {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+
+    padding: 2.4rem 2.4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    margin-bottom: 5rem;
+  }
+
+  #timer {
+    padding: 2rem 3.2rem;
+  }
+
+  main {
+    gap: 3rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .sounds {
+    gap: 2rem;
+  }
+
+  .sounds button {
+    padding: 3.6rem;
+  }
+}
