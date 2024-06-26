@@ -1,13 +1,14 @@
 # myTime
-Contador pomodoro para te ajudar a focar melhor nas tarefas :)
+Pomodoro timer designed to enhance your focus on tasks :)
+
 
 
 
 
 ## 🚀 Tecnologias: 
-- HTML, CSS e JavaScript
+- HTML, CSS and JavaScript
 
-Aplica conceitos de utilização da DOM no navegador, funções callbacks, padrão Factory e injeção de dependências. Além disso, adicionei sons para ajudar no momento de foco 🎶
+Applies concepts of DOM manipulation in the browser, callback functions, Factory pattern, and dependency injection. Additionally, I added sounds to help with focus 🎶 
 
 
 
